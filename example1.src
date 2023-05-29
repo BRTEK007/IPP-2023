@@ -1,0 +1,28 @@
+#reads int and prints it's double
+.IPPcode23
+
+DEFVAR GF@user_input
+
+READ GF@user_input int
+PUSHS GF@user_input
+CALL print_double
+EXIT int@0
+
+
+#function print_double(int)
+LABEL print_double
+
+CREATEFRAME
+PUSHFRAME
+
+DEFVAR LF@var
+
+POPS LF@var
+
+MUL LF@var LF@var int@2
+
+WRITE LF@var
+
+POPFRAME
+
+RETURN
